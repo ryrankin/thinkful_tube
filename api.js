@@ -15,8 +15,8 @@ function displayYoutubeSearchData(data){
 	var resultElement = '';
 	if(data.items){
 		data.items.forEach(function(item){
-			resultElement += '<p>' + item.snippet.channelTitle + '</p>';
-
+			resultElement += '<p>' + item.snippet.channelTitle + '</p>' + '<img src="' + item.snippet.thumbnails.default.url + '"/>';
+			console.log(resultElement);
 		});
 	}
 	else {
